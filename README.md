@@ -1,4 +1,4 @@
-# Daymark — Task Management Application
+# Task Management Application
 
 A modern, full-stack task management platform built with React, Node.js, Express, GraphQL (Apollo Server), MongoDB, Redis, and Elasticsearch.
 
