@@ -77,29 +77,13 @@ The application strictly implements **Separation of Concerns**:
 ### Prerequisites
 - Node.js (v20+ recommended)
 - MongoDB (local or MongoDB Atlas connection string)
-- (Optional) Docker for running Redis and Elasticsearch locally
-
----
-
-### Step 1: Starting Redis and Elasticsearch (Docker)
-
-You can launch Redis and Elasticsearch with a single command using Docker:
-
-#### 1. Start Redis
-```bash
-docker run -d --name task-redis -p 6379:6379 redis:alpine
-```
-
-#### 2. Start Elasticsearch
-```bash
-docker run -d --name task-elasticsearch -p 9200:9200 -e "discovery.type=single-node" -e "xpack.security.enabled=false" docker.elastic.co/elasticsearch/elasticsearch:8.13.0
-```
+- locally installed Redis and Elasticsearch
 
 > **Note on Resiliency**: Redis and Elasticsearch are optional for local development. If either service is offline, the backend automatically logs a warning and falls back to MongoDB directly without crashing.
 
 ---
 
-### Step 2: Backend Setup
+### Step 1: Backend Setup
 
 1. Open your terminal in the backend directory:
    ```bash
@@ -139,7 +123,7 @@ docker run -d --name task-elasticsearch -p 9200:9200 -e "discovery.type=single-n
 
 ---
 
-### Step 3: Frontend Setup
+### Step 2: Frontend Setup
 
 1. Open a new terminal in the frontend directory:
    ```bash
